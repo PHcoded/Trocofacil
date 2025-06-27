@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrocoFácil</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/263/263142.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TrocoFácil</h1>
+      <button class="theme-toggle" onclick="alternarTema()">🌙 Modo Escuro</button>
+    </header>
+
+    <div class="formulario">
+      <input type="text" id="produto" placeholder="Nome do Produto" />
+      <input type="number" id="preco" placeholder="Preço (R$)" />
+      <button onclick="adicionarProduto()">Adicionar Produto</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Preço</th>
+          <th>Qtd</th>
+          <th>Total</th>
+          <th>Remover</th>
+        </tr>
+      </thead>
+      <tbody id="lista-produtos"></tbody>
+    </table>
+
+    <div class="final">
+      <p>Total da Compra: R$ <span id="total-compra">0.00</span></p>
+      <input type="number" id="valor-cliente" placeholder="Valor pago pelo cliente (R$)" />
+      <button onclick="calcularTroco()">Calcular Troco</button>
+      <p class="troco">Troco: R$ <span id="troco">0.00</span></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>Projeto desenvolvido como parte de portfólio.</p>
+      <p>
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="16"/>
+        <a href="https://github.com/Phdev6" target="_blank">Phdev6</a> • 2025
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
